@@ -65,7 +65,7 @@
  	/*Adding background for the slides
 	* --------------------------------------- */
 	#slide1{
-		background-image: url(imgs/bg2.jpg);
+		/*background-image: url(imgs/bg2.jpg);*/
 		padding: 6% 0 0 0;
 	}
 	#slide2{
@@ -100,9 +100,8 @@
 			$('#fullpage').fullpage({
 				verticalCentered: false,
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
-				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-				//scrollBar: true,
-				scrollOverflow: true
+				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+				scrollBar: true
 			});
 		});
 	</script>
@@ -150,8 +149,8 @@
 <div id="fullpage">
 	<!-- <div class="section " id="section0"><h1>fullPage.js</h1></div> -->
 	<div class="section " id="section0"><h1>Nielsen Wedding</h1></div>
-	<div class="section" id="section1">
-		<div class="slide" id="slide1"><h1>Slide Backgrounds</h1>
+	<div class="section" id="section1"><h1>RSVP</h1>
+		<!-- <div class="slide" id="slide1"><h1>Slide Backgrounds</h1> -->
 		<script type="text/javascript" src="http://app.rsvpify.com/embed/26977"></script>
 		<script type="text/javascript" src="http://app.rsvpify.com/js/iframeResizer.min.js"></script>
 		<script type="text/javascript">iFrameResize({autoResize: true,heightCalculationMethod: 'max',enablePublicMethods: true}, "#RSVPifyIFrame");</script>
