@@ -53,13 +53,10 @@
 		background-image: url(imgs/venuePic.jpg);
 		padding: 6% 0 0 0;
 	}
-	/*#section3{
+	#section3{
 		background-image: url(imgs/bg4.jpg);
 		padding: 6% 0 0 0;
 	}
-	#section3 h1{
-		color: #000;
-	}*/
 
 
  	/*Adding background for the slides
@@ -79,6 +76,25 @@
 	#infoMenu li a {
 		color: #fff;
 	}
+    #xxx {
+  /*outline:white solid 0.5px;*/
+  padding: 6px 8px;
+  border-radius: 3px;
+  color:rgba(0,0,0,0.4);
+  font-weight: bold;
+  border: none;
+  margin: 0;
+  background: rgba(0,0,0,0.2);
+  font-family: helvetica, arial, sans-serif;
+  font-size: 19pt;
+  border: 5px solid rgba(255,69,0,0.5);
+}
+
+#xxx:hover {
+   background: rgba(0,0,0,0.4); 
+   color:rgba(0,0,0,0.8);
+}
+
 	</style>
 
 	<!--[if IE]>
@@ -101,7 +117,11 @@
 				verticalCentered: false,
 				anchors: ['firstPage', 'secondPage', '3rdPage','rsvpPage'],
 				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-				scrollBar: true
+				//scrollBar: true,
+                autoScrolling: false,
+                navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['First page', 'Second page', 'Venue Page', 'RSVP']
 			});
 		});
 	</script>
@@ -109,36 +129,7 @@
 </head>
 <body>
 
-<!-- <a href="https://github.com/alvarotrigo/fullPage.js" id="githubLink"><img style="position: fixed;z-index:99; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
- 
-<select id="demosMenu">
-  <option selected>Choose Demo</option>
-  <option id="backgrounds">Background images</option>
-  <option id="backgroundVideo">Background video</option>
-  <option id="gradientBackgrounds">Gradient backgrounds</option>
-  <option id="backgroundsFixed">Fixed fullscreen backgrounds</option>
-  <option id="looping">Looping</option>
-  <option id="noAnchor">No anchor links</option>
-  <option id="scrollingSpeed">Scrolling speed</option>
-  <option id="easing">Easing</option>
-  <option id="callbacks">Callbacks</option>
-  <option id="css3">CSS3</option>
-  <option id="continuous">Continuous scrolling</option>
-  <option id="normalScroll">Normal scrolling</option>
-  <option id="scrollBar">Scroll bar enabled</option>
-  <option id="scrolling">Scroll inside sections and slides</option>
-  <option id="navigationV">Vertical navigation dots</option>
-  <option id="navigationH">Horizontal navigation dots</option>
-  <option id="fixedHeaders">Fixed headers</option>
-  <option id="apple">Apple iPhone demo (animations)</option>
-  <option id="oneSection">One single section</option>
-  <option id="responsiveHeight">Responsive Height</option>
-  <option id="responsiveWidth">Responsive Width</option>
-  <option id="methods">Methods</option>
-</select> -->
-<!-- tweet button removed 12/28/15 -->
-<!-- <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://alvarotrigo.com/fullPage/" data-text="Great plugin to create fullscreen scrolling websites: http://alvarotrigo.com/fullPage/">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
 
 <ul id="menu">
 	<li data-menuanchor="rsvpPage" class="active"><a href="#rsvpPage">RSVP</a></li>
@@ -158,10 +149,11 @@
 	    <div class="slide" id="slide2"><h1>Totally customizable</h1></div>
 	</div>
 	<div class="section" id="section2"><h1>Colonel Francis Beatty Park</h1></div>
-	<div class="section" id="section3">
-		<script type="text/javascript" src="http://app.rsvpify.com/embed/26977"></script>
+	<div class="section" id="section3"><h1>RSVP</h1>
+        <a href="http://joshandrea.rsvpify.com" target="new"><button id="xxx">Click Here to RSVP</button></a>
+	   <!-- <script type="text/javascript" src="http://app.rsvpify.com/embed/26977"></script>
 		<script type="text/javascript" src="http://app.rsvpify.com/js/iframeResizer.min.js"></script>
-		<script type="text/javascript">iFrameResize({autoResize: true,heightCalculationMethod: 'max',enablePublicMethods: true}, "#RSVPifyIFrame");</script>
+		<script type="text/javascript">iFrameResize({autoResize: true,heightCalculationMethod: 'max',enablePublicMethods: true}, "#RSVPifyIFrame");</script> -->
 	</div>
 </div>
 
