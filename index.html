@@ -50,16 +50,16 @@
 		padding: 30% 0 0 0;
 	}
 	#section2{
-		background-image: url(imgs/bg3.jpg);
+		background-image: url(imgs/venuePic.jpg);
 		padding: 6% 0 0 0;
 	}
-	#section3{
+	/*#section3{
 		background-image: url(imgs/bg4.jpg);
 		padding: 6% 0 0 0;
 	}
 	#section3 h1{
 		color: #000;
-	}
+	}*/
 
 
  	/*Adding background for the slides
@@ -99,7 +99,7 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage','rsvpPage'],
+				anchors: ['firstPage', 'secondPage', '3rdPage','rsvpPage'],
 				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
 				scrollBar: true
 			});
@@ -142,8 +142,8 @@
 
 <ul id="menu">
 	<li data-menuanchor="rsvpPage" class="active"><a href="#rsvpPage">RSVP</a></li>
-	<!-- <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-	<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li> -->
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Venue</a></li>
+	<!-- <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li> -->
 </ul>
 
 <div id="fullpage">
@@ -157,9 +157,8 @@
 		-->
 	    <div class="slide" id="slide2"><h1>Totally customizable</h1></div>
 	</div>
-	<div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
-	<div class="section" id="section3"><h1>One Image = One thousand words</h1></div>
-	<div class="section" id="section4">
+	<div class="section" id="section2"><h1>Colonel Francis Beatty Park</h1></div>
+	<div class="section" id="section3">
 		<script type="text/javascript" src="http://app.rsvpify.com/embed/26977"></script>
 		<script type="text/javascript" src="http://app.rsvpify.com/js/iframeResizer.min.js"></script>
 		<script type="text/javascript">iFrameResize({autoResize: true,heightCalculationMethod: 'max',enablePublicMethods: true}, "#RSVPifyIFrame");</script>
