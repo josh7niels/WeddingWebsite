@@ -22,7 +22,16 @@
 		font-family: "lucida calligraphy",arial,'sans serif';
         font-style: "italic";
 		/*color: #fff;*/
-		color: #9400D3; /*added 12/28/15*/
+		color: #9400D3;
+		margin:0;
+		padding:0;
+	}
+    h2{
+		font-size: 24px;
+		font-family: "lucida calligraphy",arial,'sans serif';
+        font-style: "italic";
+		/*color: #fff;*/
+		color: #9400D3;
 		margin:0;
 		padding:0;
 	}
@@ -44,22 +53,31 @@
 	* --------------------------------------- */
 	#section0{
 	/*background-image: url(imgs/bg1.jpg);*/
-	background-image: url(imgs/mainPic.jpg);
+	    background-image: url(imgs/mainPic.jpg);
 		padding: 10% 0 0 0;
 	}
     #section1{
+        /*
 		background-image: url(imgs/bg2.jpg);
-		padding: 6% 0 0 0;
+        */
+        background-image: url(imgs/whiteBackground.jpg);
+        border-style: groove;
+        border-width: 26px 26px 26px 26px;
+        border-color: mediumpurple;
+        /*background-color: white;*/
+		padding: 4% 0 0 0;
 	}
 	#section2{
+        /*
 		background-image: url(imgs/venuePic.jpg);
-		padding: 6% 0 0 0;
+        */
+        background-color: mediumpurple;
+        border-style: groove;
+        border-width: 26px 26px 26px 26px;
+        border-color: white;
+		padding: 4% 0 0 0;
 	}
-	#section3{
-		background-image: url(imgs/bg4.jpg);
-		padding: 6% 0 0 0;
-	}
-    #section4{
+    #section3{
 		background-image: url(imgs/andrea2.jpg);
 		padding: 6% 0 0 0;
 	}
@@ -71,16 +89,15 @@
 	}
     #rsvpButton {
         /*outline:white solid 0.5px;*/
-        padding: 6px 8px;
-        border-radius: 3px;
-        color:rgba(0,0,0,0.4);
-        font-weight: bold;
         border: none;
+        padding: 6px 8px;
+        border-radius: 5px;
+        color:rgba(255,255,255,0.6);
+        font-weight: bold;
         margin: 0;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.4);
         font-family: helvetica, arial, sans-serif;
         font-size: 19pt;
-        border: 5px solid rgba(255,69,0,0.5);
     }
     #rsvpButton:hover {
         background: rgba(0,0,0,0.4); 
@@ -107,7 +124,7 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['firstPage', 'registryPage', 'venuePage','rsvpPage', 'ourStory'],
+				anchors: ['firstPage', 'registryPage', 'venuePage', 'ourStory'],
 				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
 				//scrollBar: true,
                 autoScrolling: false,
@@ -124,21 +141,39 @@
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Back to Top</a></li>
     <li data-menuanchor="registryPage" class="active"><a href="#registryPage">Registry</a></li>
     <li data-menuanchor="venuePage" class="active"><a href="#venuePage">Venue</a></li>
-	<li data-menuanchor="rsvpPage" class="active"><a href="#rsvpPage">RSVP</a></li>
     <li data-menuanchor="ourStory" class="active"><a href="#ourStory">Our Story</a></li>
+    <li data-menuanchor="rsvpPage" class="active"><a href="http://joshandrea.rsvpify.com" target="new">RSVP</a></li>
 </ul>
 
 <div id="fullpage">
 	<!-- <div class="section " id="section0"><h1>fullPage.js</h1></div> -->
-	<div class="section" id="section0"><h1>July 30th, 2016</h1></div>
-	<div class="section" id="section1"><h1>More Registry info coming soon!</h1>
-        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542890391&pwsurl="target="new"><button id="rsvpButton">View BB&B Registry</button></a>
-	</div>
-	<div class="section" id="section2"><h1>Colonel Francis Beatty Park</h1></div>
-	<div class="section" id="section3"><h1>RSVP</h1>
-        <a href="http://joshandrea.rsvpify.com" target="new"><button id="rsvpButton">Click Here to RSVP</button></a>
-	</div>
-    <div class="section" id="section4"><h1>Welcome to Our Story</h1></div>
+	<div class="section" id="section0"><h1>July 30th, 2016</h1>
+        <a style="position: relative; top: 50%;" href="http://joshandrea.rsvpify.com" target="new"><button id="rsvpButton">Click Here to RSVP</button></a>
+    </div>
+	<div class="section" id="section1"><h2>Registry info will continue to be updated!</h2>
+        <br><br><br>
+        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542890391&pwsurl="target="new"><button id="rsvpButton">View Registry</button></a>
+        <p style="margin-left: 20px; margin-top: 20px;" align="left"> We are registered at Bed Bath and Beyond. <br>
+	        <br> Can't find a gift? We can use giftcards. Our favorit stores are BB&B, Amazon, and Target or any other home store <br> 
+        </p>
+    </div>
+	<div class="section" id="section2"><h1 style="color: white;">Northside Baptist Church</h1>
+        <p style="margin-left: 20px; color: White">333 Jeremiah Blvd, Charlotte, NC 28262
+            <br>
+        </p>
+        <div class="bubbleLeft">
+            <h3>Details on the wedding day to follow</h3>
+            <p></p>
+        </div>
+        <div class="bubbleRight">
+            <h3>Lodging for the Wedding</h3>
+            <p>We have not blocked any rooms but here are some options for loging in the area.</p>
+            <h4>Lodging Option 1</h4>
+            <h4>Lodging Option 2</h4>
+            <h4>Lodging Option 3</h4>
+        </div>
+    </div>
+    <div class="section" id="section3"><h1 class="transbox">Welcome to Our Story</h1></div>
 </div>
 
 </body>
