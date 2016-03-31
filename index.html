@@ -19,10 +19,9 @@
 	/* Style for our header texts
 	* --------------------------------------- */ 
 	h1{
-		font-size: 5em;
+		font-size: 6em;
 		font-family: "lucida calligraphy",arial,'sans serif';
         font-style: "italic";
-		/*color: #fff;*/
 		color: #9400D3;
 		margin:0;
 		padding:0;
@@ -31,7 +30,6 @@
 		font-size: 24px;
 		font-family: "lucida calligraphy",arial,'sans serif';
         font-style: "italic";
-		/*color: #fff;*/
 		color: #9400D3;
 		margin:0;
 		padding:0;
@@ -55,6 +53,7 @@
 	#section0{
 	/*background-image: url(imgs/bg1.jpg);*/
 	    background-image: url(imgs/mainPic.jpg);
+        background-position: top;
 		padding: 10% 0 0 0;
 	}
     #section1{
@@ -77,6 +76,7 @@
 	}
     #section3{
 		background-image: url(imgs/andrea2.jpg);
+        background-position: bottom;
 		padding: 6% 0 0 0;
 	}
 
@@ -86,6 +86,23 @@
 		color: #fff;
 	}
     #rsvpButton {
+        border: none;
+        padding: 4px 8px 0px 0px;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        color:rgba(255,255,255,0.6);
+        font-weight: bold;
+        background: rgba(0,0,0,0.4);
+        font-size: 28px;
+		font-family: "lucida calligraphy",arial,'sans serif';
+        font-style: "italic";
+    }
+    #rsvpButton:hover {
+        background: rgba(0,0,0,0.4); 
+        color:rgba(148,0,211,0.8);
+    }
+    #registryButton {
         /*outline:white solid 0.5px;*/
         border: none;
         padding: 6px 8px;
@@ -97,7 +114,7 @@
         font-family: helvetica, arial, sans-serif;
         font-size: 19pt;
     }
-    #rsvpButton:hover {
+    #registryButton:hover {
         background: rgba(0,0,0,0.4); 
         color:rgba(0,0,0,0.8);
     }
@@ -146,9 +163,12 @@
 </ul>
 
 <div id="fullpage">
-	<div class="section" id="section0"><h1>July 30th, 2016</h1>
-        <a style="position: relative; top: 40%;" href="http://joshandrea.rsvpify.com" target="new"><button id="rsvpButton">Click Here to RSVP</button></a>
-        <div class="clock" align="right" style="position: relative; left: 22%; top: 45%; margin:0em;"></div>
+	<div class="section" style="text-align: center" id="section0">
+        <h1>July 30th, 2016</h1>
+        <div>
+        <a href="http://joshandrea.rsvpify.com" target="new"><button id="rsvpButton">RSVP</button></a>
+        </div>
+        <div class="clock" style="display: inline-block; position: relative; top: 45%;"></div>
 		<script type="text/javascript">
 			var clock;
 			$(document).ready(function() {
@@ -164,7 +184,7 @@
     </div>
 	<div class="section" id="section1"><h2>Registry info will continue to be updated!</h2>
         <br><br><br>
-        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542890391&pwsurl="target="new"><button id="rsvpButton">View Registry</button></a>
+        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542890391&pwsurl="target="new"><button id="registryButton">View Registry</button></a>
         <p style="margin-left: 20px; margin-top: 20px;" align="left"> We are registered at Bed Bath and Beyond. <br>
 	        <br> Can't find a gift? We can use giftcards. Our favorit stores are BB&B, Amazon, and Target or any other home store <br> 
         </p>
