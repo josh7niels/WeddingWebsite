@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <title>Background images - fullPage.js</title> -->
+	<title>Nielsen Wedding</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" href="flipclock.css">
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */ 
+	h1{
+		font-size: 6em;
+		font-family: "lucida calligraphy",arial,'sans serif';
+        font-style: "italic";
+		color: #9400D3;
+		margin:0;
+		padding:0;
+	}
+    h2{
+		font-size: 24px;
+		font-family: "lucida calligraphy",arial,'sans serif';
+        font-style: "italic";
+		color: #9400D3;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	.section{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+	/*background-image: url(imgs/bg1.jpg);*/
+	    background-image: url(imgs/mainPic.jpg);
+        background-position: top;
+		padding: 10% 0 0 0;
+	}
+    #section1{
+        /*
+		background-image: url(imgs/bg2.jpg);
+        */
+        background-image: url(imgs/whiteBackground.jpg);
+        border-style: groove;
+        border-width: 26px 26px 26px 26px;
+        border-color: mediumpurple;
+        /*background-color: white;*/
+		padding: 4% 0 0 0;
+	}
+	#section2{
+        background-color: mediumpurple;
+        border-style: groove;
+        border-width: 26px 26px 26px 26px;
+        border-color: white;
+		padding: 4% 0 0 0;
+	}
+    #section3{
+		background-image: url(imgs/andrea2.jpg);
+        background-position: bottom;
+		padding: 6% 0 0 0;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+    #rsvpButton {
+        border: none;
+        padding: 4px 8px 0px 0px;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        color:rgba(255,255,255,0.6);
+        font-weight: bold;
+        background: rgba(0,0,0,0.4);
+        font-size: 28px;
+		font-family: "lucida calligraphy",arial,'sans serif';
+        font-style: "italic";
+    }
+    #rsvpButton:hover {
+        background: rgba(0,0,0,0.4); 
+        color:rgba(148,0,211,0.8);
+    }
+    #registryButton {
+        /*outline:white solid 0.5px;*/
+        border: none;
+        padding: 6px 8px;
+        border-radius: 5px;
+        color:rgba(255,255,255,0.6);
+        font-weight: bold;
+        margin: 0;
+        background: rgba(0,0,0,0.4);
+        font-family: helvetica, arial, sans-serif;
+        font-size: 19pt;
+    }
+    #registryButton:hover {
+        background: rgba(0,0,0,0.4); 
+        color:rgba(0,0,0,0.8);
+    }
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script src="flipclock.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: false,
+				anchors: ['firstPage', 'registryPage', 'venuePage', 'ourStory'],
+				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+				//scrollBar: true,
+                autoScrolling: false,
+                continuousHorizontal: true
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+<ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Back to Top</a></li>
+    <li data-menuanchor="registryPage" class="active"><a href="#registryPage">Registry</a></li>
+    <li data-menuanchor="venuePage" class="active"><a href="#venuePage">Venue</a></li>
+    <li data-menuanchor="ourStory" class="active"><a href="#ourStory">Our Story</a></li>
+    <li data-menuanchor="rsvpPage" class="active"><a href="http://joshandrea.rsvpify.com" target="new">RSVP</a></li>
+</ul>
+
+<div id="fullpage">
+	<div class="section" style="text-align: center" id="section0">
+        <h1>July 30th, 2016</h1>
+        <div>
+        <a href="http://joshandrea.rsvpify.com" target="new"><button id="rsvpButton">RSVP</button></a>
+        </div>
+        <div class="clock" style="display: inline-block; position: relative; top: 40%;"></div>
+		<script type="text/javascript">
+			var clock;
+			$(document).ready(function() {
+				var currentDate = new Date();
+                var futureDate  = new Date(1469912400000);
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+		</script>
+    </div>
+	<div class="section" id="section1"><h2>Click below to view our registry at Bed Bath and Beyond</h2>
+        <br><br><br>
+		<h2 style="margin-left: 20px; margin-top: 20px;" align="left"> <h2/>
+        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542890391&pwsurl="target="new"><button id="registryButton">View Registry</button></a>
+        <br><br> 
+		<h3 align="center">Can't find a gift? We can use giftcards. Our favorit stores are BB&B, Amazon, Home Depot, and Target! <h3/> 
+    </div>
+	<div class="section" id="section2"><h1 style="color: white;">Northside Baptist Church</h1>
+        <p style="margin-left: 20px; color: White">333 Jeremiah Blvd, Charlotte, NC 28262<br></p>
+		<br/>
+		<p> If you are still looking for lodging options and need suggestions email us at 
+			<a href="mailto:wedding@joshandrea.com?Subject=Lodging%20questions" target="_top">wedding@joshandrea.com</a> 
+		</p>
+	<div>
+        <div class="bubbleLeft">
+			<p><br/></p>
+            <h3>Details of the wedding day to follow</h3>
+            <p></p>
+        </div>
+        <div class="bubbleRight">
+			<p><br/></p>
+            <h3>Map of the Venue</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1359.7659780343456!2d-80.78447636551668!3d35.28504315090121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x435b8473fff38c06!2sNorthside+Baptist+Church!5e1!3m2!1sen!2sus!4v1465938070990" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+	</div>
+    </div>
+    <div class="section" id="section3"><h1 class="transbox">Welcome to Our Story</h1></div>
+</div>
+
+</body>
+</html>
